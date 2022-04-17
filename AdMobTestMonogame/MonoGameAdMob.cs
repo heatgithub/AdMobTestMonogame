@@ -13,7 +13,7 @@ namespace MonoGameAdMob
 
     public interface IAdManager
     {
-        public void ShowBannerAd(BannerPosition bannerPos);
+        public void ShowBannerAd(BannerPosition bannerPos, int margin = 0);
         public void HideBannerAd();
         public int BannerHeight();
     }
@@ -35,7 +35,7 @@ namespace MonoGameAdMob
             MobileAds.Initialize(Activity, new InitializationListener(this));
         }
 
-        public void ShowBannerAd(BannerPosition bannerPos)
+        public void ShowBannerAd(BannerPosition bannerPos, int margin = 0)
         {
             // Create the banner ad
             adView = new AdView(Activity)
@@ -49,9 +49,11 @@ namespace MonoGameAdMob
             var adViewParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WrapContent, RelativeLayout.LayoutParams.WrapContent);
             if (bannerPos == BannerPosition.BottomBanner) {
                 adViewParams.AddRule(LayoutRules.AlignParentBottom, 1);
+                adViewParams.BottomMargin = margin;
             }
             if (bannerPos == BannerPosition.TopBanner) {
                 adViewParams.AddRule(LayoutRules.AlignParentTop, 1);
+                adViewParams.TopMargin = margin;
             }
 
             // Add the banner ad to the layout

@@ -57,6 +57,12 @@ ads.ShowBannerAd(MonoGameAdMob.BannerPosition.TopBanner);
 
 Change parameter in second line to `MonoGameAdMob.BannerPosition.BottomBanner` to position the banner at the bottom of the screen.
 
+If some margin is wanted, under a bottom banner or above a top banner, add the margin to the `ShowBannerAd()` function.
+
+```
+ads.ShowBannerAd(MonoGameAdMob.BannerPosition.BottomBanner, 46);
+```
+
 ### 6 - Hide the banner
 
 To hide the banner, use this line.

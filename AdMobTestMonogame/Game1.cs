@@ -56,18 +56,18 @@ namespace AdMobTestMonogame
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
             // TODO: Add your drawing code here
 
-            GraphicsDevice.SetRenderTarget(_renderTarget);
-            _spriteBatch.Begin();
-            
-            _spriteBatch.End();
-            GraphicsDevice.SetRenderTarget(null);
+            //GraphicsDevice.SetRenderTarget(_renderTarget);
+            //_spriteBatch.Begin();
+
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            //_spriteBatch.End();
+            //GraphicsDevice.SetRenderTarget(null);
 
             _spriteBatch.Begin();
-            _spriteBatch.Draw(_renderTarget, _graphics.GraphicsDevice.Viewport.Bounds, Color.White);
+            //_spriteBatch.Draw(_renderTarget, _graphics.GraphicsDevice.Viewport.Bounds, Color.White);
             _spriteBatch.End();
 
             base.Draw(gameTime);

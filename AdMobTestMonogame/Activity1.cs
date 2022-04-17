@@ -32,7 +32,7 @@ namespace AdMobTestMonogame
             //***** add ad ********************************************************************************************
 
             MonoGameAdMob.IAdManager ads = new MonoGameAdMob.AdMobAdapter(this, "ca-app-pub-3940256099942544/6300978111");
-            ads.ShowBannerAd(MonoGameAdMob.BannerPosition.TopBanner);
+            ads.ShowBannerAd(MonoGameAdMob.BannerPosition.BottomBanner, 46);
 
             //*********************************************************************************************************
 
