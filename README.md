@@ -1,17 +1,17 @@
 # MonoGameAdMob
 
-Sample of adding an AdMob banner to a Android MonoGame game.
+Sample of adding an AdMob banner to an Android MonoGame game.
 
 ## How to use it
 
 ### 1 - NuGet packages
 
-The code in *AdMobAdapter.cs* needs *Xamarin.GooglePlayServices.Ads.Lite* to be installed from NuGet.
+The code in *MonoGameAdMob.cs* needs *Xamarin.GooglePlayServices.Ads.Lite* to be installed from NuGet.
 
 Is the Target SDK set to 31 [Android S 12] or newer, *Xamarin.AndroidX.Work.Runtime* version 2.7.0 or newer 
 alsa has to be installed from NuGet, otherwise there will be errors about FLAG_IMMUTABLE.
 
-### 2 - AdMobAdapter.cs
+### 2 - MonoGameAdMob.cs
 
 Add this code as it is to the project.
 
